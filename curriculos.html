@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de Currículos</title>
+    <link rel="stylesheet" href="/style/styles.css">
+    <style>
+        /* Secções da página */
+        .sobre, .servicos {
+            padding: 50px 0;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* Estilos para o botão e a animação de confirmação */
+        .popup-confirmation {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #48BB78; /* Cor de confirmação verde */
+            color: white;
+            border-radius: 5px;
+            font-size: 1.2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .popup-confirmation.show {
+            display: block;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* Botão para fechar o pop-up */
+        .popup-confirmation button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: white;
+            color: #48BB78;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-confirmation button:hover {
+            background-color: #fff;
+            color: #48BB78;
+        }
+    </style>
+</head>
+<body>
+    <header class="header small-header" id="header">
+        <a href="index.html"><img src="/imgs/logo.jpeg" alt="Logo da Empresa" class="logo"></a>
+        <nav class="nav-icons" id="nav-icons">
+            <a href="index.html#sobre"><h1>Sobre nós</h1></a>
+            <a href="index.html#servicos"><h1>Serviços</h1></a>
+            <a href="curriculos.html"><h1>Envio de Currículos</h1></a>
+            <a href="newsletter.html"><h1>Inscrição na Newsletter</h1></a>
+        </nav>
+    </header>
+
+    <section id="curriculo" class="sobre">
+        <div class="container">
+            <h2>Envio de Currículos</h2>
+            <form id="curriculo-form" action="submit_curriculo.php" method="post" enctype="multipart/form-data" class="form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="curriculo">Anexar Currículo:</label>
+                <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+
+                <button type="submit" id="submit-curriculo">Enviar Currículo</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pop-up de confirmação -->
+    <div class="popup-confirmation" id="popup">
+        <p>Currículo enviado com sucesso!</p>
+        <button onclick="closePopup()">Fechar</button>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Calidá - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('curriculo-form');
+        const popup = document.getElementById('popup');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+
+            // Exibe o pop-up de confirmação
+            popup.classList.add('show');
+        });
+
+        function closePopup() {
+            popup.classList.remove('show'); // Fecha o pop-up
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    background-color: #BACDB0;
+    color: #2E2C2F;
+}
+
+p{
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sobre-container .imgR{
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    float: right;
+    margin-right: 30px;
+}
+
+.servicos-container .imgE{
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    float: left;
+    margin-right: 30px;
+    padding: 20px;
+}
+
+
+/* Estilos para o header */
+.header {
+    background-color: #729B79;
+    height: 400px;
+    transition: height 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    object-fit: contain;
+    text-align: center;
+}
+
+/* Header pequeno ao rolar */
+.small-header {
+    height: 70px;
+    padding: 0 20px;
+    justify-content: space-between;
+    transition: height 0.3s ease-in-out;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 250px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 15%;
+}
+
+.servico-texto {
+    max-width: 50%;
+    text-align: justify;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 10%;
+    padding-right: 40px;
+}
+
+.servicos-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.servicos-container img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    float: right;
+    margin-right: 20px;
+    width: 30%;
+}
+
+.sobre-container img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    float: left;
+    margin-right: 30px;
+}
+
+.sobre-texto {
+    max-width: 50%;
+    text-align: justify;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.container-serv{
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.servico-texto1 {
+    display: flex;
+    flex-direction: row;
+    max-width: 55%;
+    align-items: center;
+    text-align: justify;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 50px; /* Espaço para evitar sobreposição */
+    padding-left: 20px; /* Espaço à esquerda para separação da imagem */
+}
+
+.servico-texto1 p{
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+.servico-texto2 {
+    display: flex;
+    flex-direction: row;
+    max-width: 25%;
+    align-items: center;
+    text-align: justify;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 150px; /* Espaço para evitar sobreposição */
+    padding-left: 20px; /* Espaço à esquerda para separação da imagem */
+}
+
+.servico-texto2 p {
+    text-align: center;;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.small-header .logo {
+    max-height: 50px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.nav-icons a {
+    color: #F3E8EE;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-icons a:hover {
+    color: #475B63;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-link i {
+    font-size: 20px;
+}
+
+/* Secções da página */
+.sobre, .servicos {
+    padding: 10px 0;
+    margin-top: 150px;
+}
+
+.footer {
+    background-color: #2E2C2F;
+    color: #F3E8EE;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+/* Ícone de chat */
+.chat-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #729B79;
+    color: #F3E8EE;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+/* Pop-up de chat */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    background-color: #475B63;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.chat-popup.active {
+    display: block;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os campos do formulário */
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="file"] {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #729B79;
+    color: #F3E8EE;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #475B63; /* Escurecer o botão ao passar o mouse */
+}
+
+.success-animation {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #48BB78; /* Cor verde de sucesso */
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.success-animation i {
+    color: white;
+    font-size: 24px;
+}
+
+button.clicked {
+    pointer-events: none;
+    background-color: #48BB78;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+button.clicked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-left: 0;
+    border-bottom: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    opacity: 0;
+    animation: checkmark 0.6s forwards;
+}
+
+@keyframes checkmark {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    50% {
+        width: 15px;
+        height: 15px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sobre-container, .servicos-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-texto, .servico-texto, .servico-texto1, .servico-texto2 {
+        max-width: 100%;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+
+    .imgR, .imgE {
+        max-width: 100%;
+        margin: 0 auto 20px;
+        float: none;
+    }
+}
