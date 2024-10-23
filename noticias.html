@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidá - Notícias</title>
+    <link rel="stylesheet" href="/style/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+        </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header class="header" id="header">
+            <a href="index.html"><img src="/imgs/logo.jpeg" alt="Logo da Empresa" class="logo"></a>
+        <nav class="nav-icons" id="nav-icons">
+            <a href="#sobre">Sobre nós</a>
+            <a href="#servicos">Serviços</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="newsletter.html" class="icon-link">
+                <i class="fas fa-envelope"></i>
+                <span>Newsletter</span>
+            </a>
+            <a href="curriculos.html" class="icon-link">
+                <i class="fas fa-file-alt"></i>
+                <span>Currículos</span>
+            </a>
+        </nav>
+    </header>
+
+    <section id="sobre" class="sobre">
+        <div class="container sobre-container">
+            <h2>Notícias</h2>
+            <div class="sobre-counteudo">
+                <img src="/imgs/ensinando.jpeg">
+                <div class="sobre-texto">
+                <p> Calidá está contratando oficialmente seus primeiros novos funcionários com o salário de 2 bilhões de reais por segundo
+<br>      
+                   </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos">
+        <div class="container servicos-container">
+            <h2></h2>
+            <div class="servicos-grid">
+                <img src="/imgs/qualidade.jpeg" class="imgR">
+                <div class="servico-texto">
+                    <p>Lorem ipsum dolor sit amet. Eos velit accusamus eum illo nemo ea dolorem officiis et expedita vitae est aliquid aspernatur At beatae nesciunt. Ab velit facere 33 vero maxime sed dignissimos pariatur et reiciendis quos rem laborum sunt et illum laborum. </p>
+                </div>
+
+                <div class="container-serv">
+                    <img src="/imgs/pronto.jpeg" class="imgE">
+                    <div class="servico-texto1">     
+                        <p>
+                            Ut nostrum deserunt qui eaque eius non dolor dolorum et laudantium mollitia. Sit neque error est magni optio est esse praesentium ab magnam dolore aut unde sunt et quidem repellendus aut nisi neque. Ut voluptas internos qui itaque galisum est amet totam est earum aperiam aut voluptatibus aliquid qui nulla autem. Ad voluptatem debitis nam placeat earum ut quae soluta est nesciunt minima ea facere tenetur.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container-serv">
+                    <img src="/imgs/conformidade.jpeg" class="imgR">
+                    <div class="servico-texto1">
+                        <p>Ut quia fugiat aut accusamus eligendi eum error quia. Ut veritatis reiciendis et quidem unde vel totam quia et dolores labore sed facere aliquid. Et optio expedita qui eaque voluptatem ut similique porro in ducimus repellat ut placeat rerum in dolores ipsum!
+                             </p>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Calidá - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="chat-icon" onclick="toggleChat()">💬</div>
+    <div class="chat-popup" id="chat-popup">
+        <p>Como podemos ajudar? <a href="https://wa.me/5571997265284" target="_blank">Entre em contato conosco!</a></p>
+    </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            const header = document.getElementById("header");
+            const navIcons = document.getElementById("nav-icons");
+
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                header.classList.add("small-header");
+                navIcons.style.display = "flex"; // Mostrar ícones
+            } else {
+                header.classList.remove("small-header");
+                navIcons.style.display = "none"; // Esconder ícones
+            }
+        }
+
+        // Função do chat
+        function toggleChat() {
+            const popup = document.getElementById('chat-popup');
+            popup.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
